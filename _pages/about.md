@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Senior Staff Scientist at <a href="https://www.jhuapl.edu/"}>JHUAPL</a> 
 
 profile:
   align: right
