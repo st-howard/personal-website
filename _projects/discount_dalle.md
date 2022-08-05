@@ -75,7 +75,14 @@ The latest text to image generation paper, [Google's Parti](https://arxiv.org/ab
 <img src="/assets/img/ai_art/parti_comparisons.png" width="50%" />
 </p>
 
-which shows that state of the art performance can be achieved with both autoregressive and diffusion based models. While it is unclear if either the diffusion or autoregressive approach will eventually be superior, the utility of transformers in encoding a compressed, semantic representation of image is apparent.
+which shows that state of the art performance can be achieved with both autoregressive and diffusion based models. The distinguishing feature between models of the same class is mainly the encoding of images and text. For example, DALLE-2 uses [CLIP](https://openai.com/blog/clip/) to encode text and images to respective latent spaces. CLIP then learns how to go from a text encoding to an image encoding, which is used in their diffusion model to generate an image. Google's Imagen uses their pre-trained and frozen (not updated during training) [T5-XXL](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html) encoder for text embedding. One particularly interesting result is the increase in performance with model size in Google's Parti, shown below
+
+<p style="text-align:center;">
+<img src="/assets/img/ai_art/parti_parameters.png" width="80%" />
+</p>
+
+suggesting that better performance can be achieved with increasingly ginormous models. The resistance to overfitting to large number of parameters has also been seen in top of extra large text models, like GPT 3 and BLOOM. 
+
 
 ## Notes on Local Text to Image Generation
 
