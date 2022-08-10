@@ -21,9 +21,15 @@ Try the app here! [![Streamlit App](https://static.streamlit.io/badges/streamlit
 
 ## Argo: Big Data Oceanography
 
-Over the past twenty years, the Argo program has revolutionized ocean monitoring by deploying thousands of robotic measuring devices known as floats across the world's oceans. At the turn of the last century, a group of international scientists and institutions created the Argo program which aims to monitor and study the world's ocean at scale. 
+Over the past twenty years, the Argo program has revolutionized oceanography by deploying thousands of robotic measuring devices known as `floats' across the world. These floats spend most of their time submerged, drifting with the ocean currents. About once a week, the float will change its bouyancy and slowly ascend to surface. During the ascent, measurements of the local pressure, temperatue, salinity and potentially other variables are taken. At the end of the ascent, the float breaches the ocean surface and transmits data to a satellite. Feeling accomplished, the float descends to a depth of around 1km and the process begins again.
 
 <figure>
 <img src="/assets/img/argo_bv/float_cycle.png" width="90%">
 <figcaption>The Argo float lifecycle. Image from  <a href="https://argo.ucsd.edu/how-do-floats-work/">here</a>.</figcaption>
 </figure>
+
+Each cycle of an argo float produces a one dimensional slice of the ocean known as a profile. Over the course of the Argo program, there have been over two million profiles acquired. Every day, approximately 400 profiles are added to this number. The scale of this data, and the number of scientists who rely upon it, requires standardized means of storage and access. A benefit of this standardization is that data retrieval, processing, and analysis can be automated. This project is a prototype of how this workflow can be turned into an app for interactive data exploration. A lot of this process is already taken care of by the great python library [argopy](https://argopy.readthedocs.io/en/latest/), which is a python wrapper to access data via the French server's REST API.
+
+## Brunt-Väisälä frequency
+
+I decided to calculate the Brunt-Väisälä (BV) frequency profile from the Argo data and allow the user to interactively see how the profile changes with region and time of year. But what is the BV frequency? In the ocean, density will vary with depth since water is both compressible and its contents (like salinity) change. When ocean currents or an external force disturbs the static density versus depth relationship, relatively dense water is shifted upwards and relatively light water is shifted downwards. Gravity then acts as a restoring force, pulling the denser water downwards and the lighter water upwards. The physics is similar to simple harmonic motion, where the density gradient is analogous to the spring constant. Just like harmonic motion, a frequency of oscillation can be determined from the strength of the restoring force. This frequency is known Brunt-Väisälä (BV) frequency. It is a critical parameter in ocean circulation and is a proxy for the local stability of the water column. BV profiles in the ocean are dependent on a large number of parameters, many of which vary of the course of the year as the mixing from winds, heating from the sun, and local ocean currents change.
