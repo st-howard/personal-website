@@ -7,6 +7,8 @@ tags: PyTorch Deep-Learning
 categories: Intros
 ---
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/st-howard/blog-notebooks/blob/main/Hello_World_PyTorch/Hello_World_PyTorch.ipynb)
+
 PyTorch is a powerful machine learning library and is [becoming the dominant deep learning framework](https://www.assemblyai.com/blog/pytorch-vs-tensorflow-in-2022/). I want to learn how to use PyTorch, so in the spirit of "Hello World"-like programs, the first thing I wanted to do is create a small neural network and train it on an easy dataset. The [PyTorch tutorial](https://pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html) creates a fully connected neural network to train on FashionMNIST, but I want something even simpler so when things go wrong I'll know that I've made a mistake somewhere. 
 
 For this experiment, I'll create a network of a few fully connected layers to classify the [two moons dataset](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html). I've chosen this dataset because the data is easily visualized and the optimal decision boundary is both non-linear and obvious on inspection.
