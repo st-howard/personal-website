@@ -6,8 +6,9 @@ description: Generating MNIST Digits from noise with HuggingFace Diffusers
 tags: PyTorch Deep-Learning Diffusion
 categories: Intros
 ---
-
 # Diffusing Digits - Generating MNIST Digits from noise with HuggingFace Diffusers
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/st-howard/blog-notebooks/blob/main/MNIST-Diffusion/Diffusion%20Digits%20-%20Generating%20MNIST%20Digits%20from%20noise%20with%20HuggingFace%20Diffusers.ipynb)
 
 <figure>
 <video width="480" height="360" controls>
