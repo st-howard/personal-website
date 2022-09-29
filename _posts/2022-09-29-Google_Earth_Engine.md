@@ -9,6 +9,8 @@ categories: Intros
 
 ## Accessing Satellite Imagery with Google Earth Engine
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/st-howard/blog-notebooks/blob/main/Google_Earth_Engine/Satellite%20Imagery%20with%20Google%20Earth%20Engine.ipynb)
+
 Satellites provide a wealth of information about the world: monitoring human development, tracking climate change, and providing vital information at scale for disaster response. Over the past decades, the scale of publicly accessible satellite data has increased exponentially. This data is collected by many research consortia, often stored on servers and accessible with APIs unique to the mission. [Google's Earth Engine](https://earthengine.google.com/) hosts a large, multi-petabyte [catalog](https://developers.google.com/earth-engine/datasets/) of satellite imagery which can be accessed and queried with a common API, for free with a Google account. This service, which requires the technical knowledge and bankroll of a tech giant, is boon for using satellite imagery at scale to learn more about the world we live in. This post documents basic interaction with the Earth Engine API in python, focusing on how to get Sentinel-2 MSI imagery.
 
 <details markdown="1"><summary>Load python libraries</summary>
