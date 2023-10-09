@@ -6,6 +6,7 @@ description: Generating MNIST Digits from noise with HuggingFace Diffusers
 tags: PyTorch Deep-Learning Diffusion
 categories: Intros
 ---
+
 # Diffusing Digits - Generating MNIST Digits from noise with HuggingFace Diffusers
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/st-howard/blog-notebooks/blob/main/MNIST-Diffusion/Diffusion%20Digits%20-%20Generating%20MNIST%20Digits%20from%20noise%20with%20HuggingFace%20Diffusers.ipynb)
@@ -420,7 +421,7 @@ accelerate.notebook_launcher(train_loop, args, num_processes=1)
 
 Once the model has been trained, we can sample the model to create digits. Or more accurately create a sample which is within the learned distribution of the training samples, since some generated samples look like an alien's numbering system, a mish-mash of the numbers 0-9.
 
-To sample images, the Diffusers library has several pipelines. However, [I found that these pipelines don't work for single channel images](https://github.com/huggingface/diffusers/issues/488). So I created a small function which samples the images, with an optional argument for saving off each step. Importantly, the function needs to have a `torch.no_grad()` decorator so the model doesn't accumulate the history of the forward passes.
+To sample images, the Diffusers library has several pipelines. However, [I found that these pipelines don't work for single channel images](https://github.com/huggingface/diffusers/issues/488) ([which is now fixed!](https://github.com/huggingface/diffusers/pull/1025)). So I created a small function which samples the images, with an optional argument for saving off each step. Importantly, the function needs to have a `torch.no_grad()` decorator so the model doesn't accumulate the history of the forward passes.
 
 
 ```python
